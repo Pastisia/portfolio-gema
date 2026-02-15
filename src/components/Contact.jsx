@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -10,11 +9,6 @@ function Contact() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [submitStatus, setSubmitStatus] = useState("");
-
-  // Initialize EmailJS
-  useEffect(() => {
-    emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -30,18 +24,24 @@ function Contact() {
     setSubmitStatus("");
 
     try {
-      await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
           from_name: formData.name,
           from_email: formData.email,
           subject: formData.subject,
           message: formData.message,
-          to_email: "nugrohogemasatya@gmail.com",
-          reply_to: formData.email,
-        },
-      );
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Failed to send email");
+      }
 
       setSubmitStatus("success");
       setFormData({ name: "", email: "", subject: "", message: "" });
@@ -95,12 +95,12 @@ function Contact() {
             <div className="text-3xl mb-3">💼</div>
             <h3 className="text-lg font-semibold mb-2">GitHub</h3>
             <a
-              href="https://github.com/gema"
+              href="https://github.com/Pastisia"
               target="_blank"
               rel="noopener noreferrer"
               className="text-purple-400 hover:text-purple-300 transition"
             >
-              github.com/gema
+              github.com/Pastisia
             </a>
           </div>
 
