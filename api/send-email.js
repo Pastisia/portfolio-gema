@@ -1,4 +1,8 @@
 import nodemailer from "nodemailer";
+import dotenv from "dotenv";
+
+// Load local env for dev (keeps production unchanged)
+dotenv.config({ path: ".env.local" });
 
 export default async function handler(req, res) {
   // Only allow POST requests
@@ -14,12 +18,25 @@ export default async function handler(req, res) {
   }
 
   try {
+    // Debug: check if env vars are available (do not log secret values)
+    console.log("GMAIL_USER set:", !!process.env.GMAIL_USER);
+    console.log("GMAIL_PASSWORD set:", !!process.env.GMAIL_PASSWORD);
+    console.log(
+      "GMAIL_PASSWORD trimmed non-empty:",
+      !!(
+        process.env.GMAIL_PASSWORD &&
+        process.env.GMAIL_PASSWORD.replace(/\s/g, "")
+      ),
+    );
+
     // Create transporter dengan Gmail
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
         user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_PASSWORD,
+        pass: process.env.GMAIL_PASSWORD
+          ? process.env.GMAIL_PASSWORD.replace(/\s/g, "")
+          : process.env.GMAIL_PASSWORD,
       },
     });
 
@@ -55,16 +72,16 @@ export default async function handler(req, res) {
     // Send email
     await transporter.sendMail(mailOptions);
 
-    return res.status(200).json({ 
+    return res.status(200).json({
       success: true,
-      message: "Email sent successfully" 
+      message: "Email sent successfully",
     });
   } catch (error) {
     console.error("Email sending error:", error);
-    return res.status(500).json({ 
+    return res.status(500).json({
       success: false,
       message: "Failed to send email",
-      error: error.message 
+      error: error.message,
     });
   }
 }
