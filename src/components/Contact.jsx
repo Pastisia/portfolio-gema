@@ -58,62 +58,62 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="py-32 bg-gradient-to-b from-gray-900 via-gray-900 to-black text-white px-6 relative overflow-hidden"
+      className="py-32 bg-gradient-to-b from-slate-900 via-slate-900 to-black text-white px-6 relative overflow-hidden"
     >
-      {/* Background decoration */}
+      {/* Background decoration - Updated to Blue/Cyan */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-600 rounded-full mix-blend-screen filter blur-3xl animate-blob"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-cyan-600 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-2000"></div>
       </div>
 
       <div className="max-w-4xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
             Mari Berkolaborasi
           </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-300 text-lg max-w-2xl mx-auto">
             Punya ide menarik atau ingin mendiskusikan proyek? Hubungi saya dan
             mari kita wujudkan sesuatu yang luar biasa bersama.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {/* Contact Info Cards */}
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
-            <div className="text-3xl mb-3">📧</div>
+          {/* Contact Info Cards - Updated Colors */}
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-blue-500 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 group">
+            <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">📧</div>
             <h3 className="text-lg font-semibold mb-2">Email</h3>
             <a
               href="mailto:nugrohogemasatya@gmail.com"
-              className="text-blue-400 hover:text-blue-300 transition break-all"
+              className="text-blue-400 hover:text-cyan-300 transition break-all text-sm"
             >
               nugrohogemasatya@gmail.com
             </a>
           </div>
 
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
-            <div className="text-3xl mb-3">💼</div>
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20 group">
+            <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">💼</div>
             <h3 className="text-lg font-semibold mb-2">GitHub</h3>
             <a
               href="https://github.com/Pastisia"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-purple-400 hover:text-purple-300 transition"
+              className="text-cyan-400 hover:text-blue-300 transition"
             >
               github.com/Pastisia
             </a>
           </div>
 
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-pink-500 transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20">
-            <div className="text-3xl mb-3">⏱️</div>
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-blue-400 transition-all duration-300 hover:shadow-lg hover:shadow-blue-400/20 group">
+            <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">⏱️</div>
             <h3 className="text-lg font-semibold mb-2">Response Time</h3>
-            <p className="text-gray-300">Biasanya 24 jam</p>
+            <p className="text-slate-300">Biasanya 24 jam</p>
           </div>
         </div>
 
-        {/* Contact Form */}
-        <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl p-8 md:p-12 rounded-2xl border border-gray-700 shadow-2xl">
-          <h3 className="text-2xl font-bold mb-8">Kirim Pesan</h3>
+        {/* Contact Form - Updated Input Focus Colors */}
+        <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl p-8 md:p-12 rounded-2xl border border-slate-700 shadow-2xl">
+          <h3 className="text-2xl font-bold mb-8 text-slate-100">Kirim Pesan</h3>
 
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Name and Email Row */}
@@ -121,7 +121,7 @@ function Contact() {
               <div className="group">
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium mb-2 text-gray-300 group-hover:text-white transition"
+                  className="block text-sm font-medium mb-2 text-slate-300 group-hover:text-blue-400 transition"
                 >
                   Nama Lengkap
                 </label>
@@ -133,10 +133,10 @@ function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-700/30 border border-gray-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:bg-gray-700/50 focus:shadow-lg focus:shadow-blue-500/20 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:bg-slate-800/50 focus:shadow-lg focus:shadow-blue-500/20 transition-all duration-300"
                     placeholder="Siapa nama Anda?"
                   />
-                  <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-500">
+                  <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-slate-500">
                     👤
                   </div>
                 </div>
@@ -145,7 +145,7 @@ function Contact() {
               <div className="group">
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium mb-2 text-gray-300 group-hover:text-white transition"
+                  className="block text-sm font-medium mb-2 text-slate-300 group-hover:text-cyan-400 transition"
                 >
                   Email Anda
                 </label>
@@ -157,10 +157,10 @@ function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-700/30 border border-gray-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:bg-gray-700/50 focus:shadow-lg focus:shadow-blue-500/20 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:bg-slate-800/50 focus:shadow-lg focus:shadow-cyan-500/20 transition-all duration-300"
                     placeholder="email@contoh.com"
                   />
-                  <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-500">
+                  <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-slate-500">
                     📧
                   </div>
                 </div>
@@ -171,7 +171,7 @@ function Contact() {
             <div className="group">
               <label
                 htmlFor="subject"
-                className="block text-sm font-medium mb-2 text-gray-300 group-hover:text-white transition"
+                className="block text-sm font-medium mb-2 text-slate-300 group-hover:text-blue-400 transition"
               >
                 Subjek
               </label>
@@ -183,10 +183,10 @@ function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-700/30 border border-gray-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:bg-gray-700/50 focus:shadow-lg focus:shadow-purple-500/20 transition-all duration-300"
+                  className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:bg-slate-800/50 focus:shadow-lg focus:shadow-blue-500/20 transition-all duration-300"
                   placeholder="Apa topik pembicaraan Anda?"
                 />
-                <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-500">
+                <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-slate-500">
                   💬
                 </div>
               </div>
@@ -196,7 +196,7 @@ function Contact() {
             <div className="group">
               <label
                 htmlFor="message"
-                className="block text-sm font-medium mb-2 text-gray-300 group-hover:text-white transition"
+                className="block text-sm font-medium mb-2 text-slate-300 group-hover:text-cyan-400 transition"
               >
                 Pesan Anda
               </label>
@@ -208,24 +208,24 @@ function Contact() {
                   onChange={handleChange}
                   required
                   rows="6"
-                  className="w-full px-4 py-3 bg-gray-700/30 border border-gray-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-purple-500 focus:bg-gray-700/50 focus:shadow-lg focus:shadow-purple-500/20 transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 bg-slate-900/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:bg-slate-800/50 focus:shadow-lg focus:shadow-cyan-500/20 transition-all duration-300 resize-none"
                   placeholder="Ceritakan tentang ide atau pertanyaan Anda..."
                 ></textarea>
               </div>
-              <p className="text-xs text-gray-500 mt-1">
+              <p className="text-xs text-slate-500 mt-1">
                 Maksimal 5000 karakter
               </p>
             </div>
 
-            {/* Submit Button */}
+            {/* Submit Button - Updated to Blue/Cyan */}
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-600 disabled:to-gray-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:scale-100 disabled:cursor-not-allowed shadow-lg hover:shadow-xl hover:shadow-purple-500/50 flex items-center justify-center gap-2"
+              className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 disabled:from-slate-700 disabled:to-slate-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.02] active:scale-95 disabled:scale-100 disabled:cursor-not-allowed shadow-lg hover:shadow-cyan-500/30 flex items-center justify-center gap-2"
             >
               {isLoading ? (
                 <>
-                  <span className="animate-spin">⚙️</span>
+                  <span className="animate-spin text-xl">⚙️</span>
                   Mengirim...
                 </>
               ) : (
@@ -235,11 +235,11 @@ function Contact() {
 
             {/* Status Messages */}
             {submitStatus === "success" && (
-              <div className="p-4 bg-gradient-to-r from-green-900/50 to-emerald-900/50 border border-green-500 text-green-200 rounded-lg animate-fade-in flex items-center gap-2">
+              <div className="p-4 bg-emerald-900/30 border border-emerald-500/50 text-emerald-200 rounded-lg animate-fade-in flex items-center gap-2 backdrop-blur-md">
                 <span className="text-xl">✓</span>
                 <div>
                   <p className="font-semibold">Pesan berhasil dikirim!</p>
-                  <p className="text-sm text-green-300">
+                  <p className="text-sm text-emerald-300/80">
                     Terima kasih. Saya akan merespon dalam 24 jam.
                   </p>
                 </div>
@@ -247,11 +247,11 @@ function Contact() {
             )}
 
             {submitStatus === "error" && (
-              <div className="p-4 bg-gradient-to-r from-red-900/50 to-rose-900/50 border border-red-500 text-red-200 rounded-lg animate-fade-in flex items-center gap-2">
+              <div className="p-4 bg-rose-900/30 border border-rose-500/50 text-rose-200 rounded-lg animate-fade-in flex items-center gap-2 backdrop-blur-md">
                 <span className="text-xl">✗</span>
                 <div>
                   <p className="font-semibold">Gagal mengirim pesan</p>
-                  <p className="text-sm text-red-300">
+                  <p className="text-sm text-rose-300/80">
                     Silakan coba lagi atau hubungi langsung via email.
                   </p>
                 </div>

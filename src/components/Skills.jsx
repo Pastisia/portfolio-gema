@@ -1,82 +1,107 @@
 import { motion } from "framer-motion";
+// Import semua ikon yang dibutuhkan
+import { 
+  SiHtml5, SiCss3, SiJavascript, SiReact, SiFlutter, 
+  SiPhp, SiMysql, SiFigma, 
+  SiGit, SiTailwindcss, SiCoreldraw, SiCodeigniter 
+} from "react-icons/si";
+import { FaDatabase, FaBootstrap } from "react-icons/fa";
+import { TbApi } from "react-icons/tb";
 
 function Skills() {
   const skills = [
     {
       name: "HTML",
-      icon: "fab fa-html5",
+      icon: <SiHtml5 />,
       color: "text-orange-500",
       description: "Markup Language",
     },
     {
       name: "CSS",
-      icon: "fab fa-css3-alt",
+      icon: <SiCss3 />,
       color: "text-blue-500",
       description: "Styling Language",
     },
     {
       name: "JavaScript",
-      icon: "fab fa-js-square",
+      icon: <SiJavascript />,
       color: "text-yellow-400",
       description: "Programming Language",
     },
     {
       name: "React JS",
-      icon: "fab fa-react",
+      icon: <SiReact />,
       color: "text-cyan-400",
       description: "JavaScript Library",
     },
     {
       name: "Flutter",
-      icon: "fab fa-flutter",
-      color: "text-blue-600",
+      icon: <SiFlutter />,
+      color: "text-blue-400",
       description: "Mobile Framework",
     },
     {
       name: "PHP",
-      icon: "fab fa-php",
-      color: "text-indigo-500",
+      icon: <SiPhp />,
+      color: "text-indigo-400",
       description: "Server Language",
     },
     {
+      name: "CodeIgniter",
+      icon: <SiCodeigniter />,
+      color: "text-red-500",
+      description: "PHP Framework",
+    },
+    {
       name: "MySQL",
-      icon: "fas fa-database",
-      color: "text-orange-600",
+      icon: <SiMysql />,
+      color: "text-blue-600",
       description: "Database Management",
     },
     {
       name: "SQL Server",
-      icon: "fas fa-server",
-      color: "text-red-600",
+      icon: <FaDatabase />,
+      color: "text-red-500",
       description: "Database System",
     },
     {
       name: "REST API",
-      icon: "fas fa-cube",
-      color: "text-purple-500",
+      icon: <TbApi />, // Postman sering digunakan mewakili API
+      color: "text-orange-500",
       description: "API Architecture",
     },
     {
       name: "Figma",
-      icon: "fab fa-figma",
+      icon: <SiFigma />,
       color: "text-pink-500",
       description: "Design Tool",
     },
     {
+      name: "CorelDRAW",
+      icon: <SiCoreldraw />,
+      color: "text-green-500",
+      description: "Vector Graphics Editor",
+    },
+    {
       name: "Git",
-      icon: "fab fa-git-alt",
-      color: "text-red-500",
+      icon: <SiGit />,
+      color: "text-orange-600",
       description: "Version Control",
     },
     {
       name: "Tailwind CSS",
-      icon: "fab fa-css3",
+      icon: <SiTailwindcss />,
       color: "text-cyan-500",
       description: "CSS Framework",
     },
+    {
+      name: "Bootstrap",
+      icon: <FaBootstrap />,
+      color: "text-cyan-500",
+      description: "CSS Framework",
+    }
   ];
 
-  // Animation variants
   const headingVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -103,25 +128,26 @@ function Skills() {
   };
 
   return (
-    <section id="skills" className="py-24 bg-gray-900 text-white px-6">
+    <section id="skills" className="py-24 bg-slate-950 text-white px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-16"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={headingVariants}
         >
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">
             Technical Expertise
           </h2>
-          <p className="text-gray-400 mt-2">
-            Skills and technologies I'm proficient in
+          <p className="text-slate-400 mt-4 text-lg">
+            Teknologi dan alat yang saya gunakan
           </p>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-400 mx-auto rounded-full mt-6"></div>
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -130,26 +156,20 @@ function Skills() {
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              className="bg-gray-800 px-3 py-2 rounded-xl hover:bg-gray-700 transition duration-300 cursor-pointer flex items-center gap-4 group"
+              className="bg-slate-900/50 backdrop-blur-sm border border-slate-800 p-4 rounded-2xl hover:bg-slate-800/80 hover:border-blue-500/50 transition-all duration-300 cursor-default flex items-center gap-5 group"
               variants={cardVariants}
             >
-              <link
-                rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-              />
               {/* Icon Section */}
-              <div className="flex-shrink-0 px-3 py-2 bg-gray-700 rounded-lg">
-                <i
-                  className={`${skill.icon} text-4xl ${skill.color} group-hover:scale-110 transition duration-300`}
-                ></i>
+              <div className={`text-4xl ${skill.color} group-hover:scale-110 transition-transform duration-300`}>
+                {skill.icon}
               </div>
 
               {/* Text Section */}
               <div className="flex-1">
-                <h3 className="font-bold text-lg text-white group-hover:text-blue-400 transition duration-300">
+                <h3 className="font-bold text-lg text-slate-100 group-hover:text-blue-400 transition-colors duration-300">
                   {skill.name}
                 </h3>
-                <p className="text-sm text-gray-400 mt-0">
+                <p className="text-sm text-slate-400">
                   {skill.description}
                 </p>
               </div>

@@ -6,38 +6,50 @@ function Projects() {
     {
       title: "RGistro E-Commerce",
       description:
-        "Website e-commerce yang menjual t-shirt dengan fitur search, cart, dan manajemen produk menggunakan PHP & MySQL.",
+        "Platform belanja online khusus t-shirt dengan integrasi sistem pencarian, keranjang belanja, dan manajemen inventaris.",
+      category: "Web Development", // Menambahkan kategori agar sama dengan kartu Design
       tech: ["PHP", "MySQL", "Tailwind"],
       image:
-        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=300&fit=crop",
+        "./assets/Projects/Project-Rgistro.png",
     },
     {
       title: "Booking Lapangan Futsal",
       description:
-        "Aplikasi Flutter untuk booking lapangan futsal dengan sistem login, booking, dan riwayat booking terintegrasi API.",
+        "Aplikasi mobile berbasis Flutter untuk reservasi lapangan secara real-time dengan manajemen riwayat booking.",
+      category: "Mobile Apps",
       tech: ["Flutter", "REST API", "MySQL"],
       image:
-        "https://images.unsplash.com/photo-1517457373614-b7152f800fd1?w=500&h=300&fit=crop",
+        "./assets/Projects/Project-Sportygo.jpg",
     },
     {
       title: "Sistem Informasi Akademik",
       description:
-        "Website akademik dengan fitur login mahasiswa, absensi per pertemuan, dan manajemen nilai.",
+        "Dashboard manajemen pendidikan untuk absensi mahasiswa dan pengolahan nilai yang terstruktur.",
+      category: "Web System",
       tech: ["PHP", "SQL Server"],
       image:
-        "https://images.unsplash.com/photo-1531482615713-2afd69097998?w=500&h=300&fit=crop",
+        "./assets/Projects/Project-Akademik.png",
     },
     {
-      title: "Website SPMB Sekolah",
+      title: "Website Profile Sekolah",
       description:
-        "Website penerimaan siswa baru dengan fitur berita dan pendaftaran online.",
+        "Portal pendaftaran siswa baru yang informatif dengan fitur publikasi berita dan formulir pendaftaran digital.",
+      category: "Frontend",
       tech: ["HTML", "CSS", "JavaScript"],
       image:
-        "https://images.unsplash.com/photo-1515378791036-0648a3ac7b67?w=500&h=300&fit=crop",
+        "./assets/Projects/Project-ProfileSekolah.png",
+    },
+    {
+      title: "Website Pemesanan Tiket Kereta",
+      description:
+        "Portal pendaftaran siswa baru yang informatif dengan fitur publikasi berita dan formulir pendaftaran digital.",
+      category: "Frontend",
+      tech: ["HTML", "CSS", "JavaScript"],
+      image:
+        "./assets/Projects/Project-Tiketku.png",
     },
   ];
 
-  // Animation variants
   const headingVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -64,25 +76,28 @@ function Projects() {
   };
 
   return (
-    <section id="projects" className="py-24 bg-gray-800 text-white px-6">
+    <section id="projects" className="py-24 bg-slate-950 text-white px-6">
       <div className="max-w-6xl mx-auto">
+        {/* Header */}
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-16"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={headingVariants}
         >
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-            Programming Projects
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
+            Implementasi Kode & Solusi
           </h2>
-          <p className="text-gray-400 mt-2">
-            Web & Mobile Applications I've Developed
+          <p className="text-slate-400 mt-4 max-w-2xl mx-auto text-lg">
+            Kumpulan aplikasi web dan mobile yang dibangun dengan fokus pada fungsionalitas dan skalabilitas.
           </p>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-400 mx-auto rounded-full mt-6"></div>
         </motion.div>
 
+        {/* Projects Grid - Menggunakan layout yang sama dengan Design.jsx */}
         <motion.div
-          className="grid md:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -91,43 +106,52 @@ function Projects() {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="bg-gray-900 overflow-hidden hover:scale-105 transition duration-300 shadow-lg group p-4 rounded-xl"
+              className="group bg-slate-900/40 backdrop-blur-sm border border-slate-800 hover:border-blue-500/50 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10"
               variants={cardVariants}
             >
-              <div className="mb-4 rounded-lg overflow-hidden">
+              {/* Image Container - Identik dengan Design Card */}
+              <div className="relative overflow-hidden h-96 bg-slate-800">
                 <GlareHover
-                  className="w-full h-40 md:h-40"
-                  glareColor="#ffffff"
-                  glareOpacity={0.3}
+                  className="w-full h-full"
+                  glareColor="#3b82f6"
+                  glareOpacity={0.15}
                   glareAngle={-45}
-                  glareSize={220}
+                  glareSize={250}
                   transitionDuration={700}
-                  style={{ width: "100%", height: "160px", borderRadius: "0" }}
+                  style={{ width: "100%", height: "100%" }}
                 >
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </GlareHover>
+
+                {/* Category Badge - Sekarang muncul juga di Programming Projects */}
+                <div className="absolute top-4 right-4">
+                  <span className="px-3 py-1 bg-blue-600/20 backdrop-blur-md text-blue-700 rounded-full text-xs font-semibold border border-blue-700/30">
+                    {project.category}
+                  </span>
+                </div>
               </div>
 
               {/* Content Section */}
-              <div>
-                <h3 className="text-lg font-semibold mb-3 text-blue-400">
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2 text-slate-100 group-hover:text-blue-400 transition">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 mb-4 text-xs leading-relaxed">
+                <p className="text-slate-400 mb-4 text-sm leading-relaxed min-h-[60px]">
                   {project.description}
                 </p>
-                {/* Tech Pills */}
+
+                {/* Tech Tags - Menggunakan gaya kotak yang sama dengan Design Card */}
                 <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech, i) => (
+                  {project.tech.map((tool, i) => (
                     <span
                       key={i}
-                      className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-medium border border-blue-400/30 hover:border-blue-400/60 hover:bg-blue-500/30 transition duration-300"
+                      className="px-2 py-1 bg-slate-800 text-slate-300 rounded-md text-xs font-medium border border-slate-700 hover:border-blue-400/60 hover:text-blue-300 transition duration-300"
                     >
-                      {tech}
+                      {tool}
                     </span>
                   ))}
                 </div>
