@@ -4,48 +4,43 @@ import GlareHover from "./GlareHover";
 function Design() {
   const designWorks = [
     {
-      title: "Web Design Carwash ",
+      title: "Web Design Carwash",
       description:
-        "Modern & responsive web design untuk platform e-commerce dengan fokus pada user experience.",
+        "Perancangan UI/UX website layanan carwash dengan tampilan modern dan responsif, dilengkapi fitur booking online, informasi layanan, serta alur navigasi yang sederhana dan mudah digunakan.",
       category: "UI/UX Design",
-      image:
-        "./assets/Projects/Design-WebCarwash.png",
+      image: "./assets/Projects/Design-WebCarwash.png",
       tools: ["Figma"],
     },
     {
       title: "Mobile App HunianID",
       description:
-        "Comprehensive UI kit untuk mobile application dengan consistent design system dan component library.",
+        "Desain antarmuka aplikasi mobile pencarian hunian dengan fokus pada kemudahan eksplorasi properti, sistem filter interaktif, serta tata letak yang bersih dan user-friendly.",
       category: "UI/UX Design",
-      image:
-        "./assets/Projects/Design-HunianID.png",
+      image: "./assets/Projects/Design-HunianID.png",
       tools: ["Figma"],
     },
     {
       title: "Web Payroll Design",
       description:
-        "Complete brand identity termasuk logo, color palette, dan typography guidelines untuk startup.",
+        "Perancangan dashboard sistem payroll berbasis web dengan struktur informasi yang terorganisir, visualisasi data gaji yang jelas, serta desain profesional untuk kebutuhan administrasi institusi.",
       category: "UI/UX Design",
-      image:
-        "./assets/Projects/Design-WebSirojul.png",
+      image: "./assets/Projects/Design-WebSirojul.png",
       tools: ["Figma"],
     },
     {
       title: "Design ID Card",
       description:
-        "High-converting landing page design dengan modern aesthetic dan clear call-to-action.",
+        "Desain kartu identitas dengan tata letak rapi, hierarki informasi yang jelas, serta penggunaan warna dan tipografi yang konsisten untuk mencerminkan identitas profesional.",
       category: "Graphic Design",
-      image:
-        "./assets/Projects/Design-Idcard1.png",
+      image: "./assets/Projects/Design-Idcard1.png",
       tools: ["CorelDraw"],
     },
     {
       title: "Design Poster Makanan",
       description:
-        "High-converting landing page design dengan modern aesthetic dan clear call-to-action.",
+        "Desain poster promosi makanan dengan komposisi visual yang menarik, pemilihan warna yang menggugah selera, serta tipografi yang kuat untuk meningkatkan daya tarik promosi.",
       category: "Graphic Design",
-      image:
-        "./assets/Projects/Design-PosterMakanan.png",
+      image: "./assets/Projects/Design-PosterMakanan.png",
       tools: ["CorelDraw"],
     },
   ];
@@ -91,7 +86,8 @@ function Design() {
             Karya Visual & Antarmuka
           </h2>
           <p className="text-slate-400 mt-4 max-w-2xl mx-auto text-lg">
-            Eksplorasi estetika dalam Web Design, UI/UX, dan Identitas Visual yang berpusat pada kenyamanan pengguna.
+            Eksplorasi estetika dalam Web Design, UI/UX, dan Identitas Visual
+            yang berpusat pada kenyamanan pengguna.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-400 mx-auto rounded-full mt-6"></div>
         </motion.div>

@@ -3,52 +3,48 @@ import GlareHover from "./GlareHover";
 
 function Projects() {
   const projects = [
-    {
-      title: "RGistro E-Commerce",
-      description:
-        "Platform belanja online khusus t-shirt dengan integrasi sistem pencarian, keranjang belanja, dan manajemen inventaris.",
-      category: "Web Development", // Menambahkan kategori agar sama dengan kartu Design
-      tech: ["PHP", "MySQL", "Bootstrap"],
-      image:
-        "./assets/Projects/Project-Rgistro.png",
-    },
-    {
-      title: "Booking Lapangan Futsal",
-      description:
-        "Aplikasi mobile berbasis Flutter untuk reservasi lapangan secara real-time dengan manajemen riwayat booking.",
-      category: "Mobile Apps",
-      tech: ["Flutter", "REST API", "MySQL"],
-      image:
-        "./assets/Projects/Project-Sportygo.jpg",
-    },
-    {
-      title: "Sistem Informasi Akademik",
-      description:
-        "Dashboard manajemen pendidikan untuk absensi mahasiswa dan pengolahan nilai yang terstruktur.",
-      category: "Web System",
-      tech: ["PHP", "CodeIgniter", "MySql"],
-      image:
-        "./assets/Projects/Project-Akademik.png",
-    },
-    {
-      title: "Website Profile Sekolah",
-      description:
-        "Portal pendaftaran siswa baru yang informatif dengan fitur publikasi berita dan formulir pendaftaran digital.",
-      category: "Web Development",
-      tech: ["PHP", "Bootstrap", "MySQL", "CodeIgniter"],
-      image:
-        "./assets/Projects/Project-ProfileSekolah.png",
-    },
-    {
-      title: "Website Pemesanan Tiket Kereta",
-      description:
-        "Portal pendaftaran siswa baru yang informatif dengan fitur publikasi berita dan formulir pendaftaran digital.",
-      category: "Frontend",
-      tech: ["PHP", "Bootstrap", "MySQL"],
-      image:
-        "./assets/Projects/Project-Tiketku.png",
-    },
-  ];
+  {
+    title: "RGistro E-Commerce",
+    description:
+      "Platform e-commerce khusus penjualan t-shirt dengan fitur pencarian produk real-time, sistem keranjang belanja, manajemen stok, serta dashboard admin untuk pengelolaan produk dan transaksi.",
+    category: "Web Development",
+    tech: ["PHP", "MySQL", "Bootstrap"],
+    image: "./assets/Projects/Project-Rgistro.png",
+  },
+  {
+    title: "Booking Lapangan Futsal",
+    description:
+      "Aplikasi mobile berbasis Flutter untuk reservasi lapangan futsal secara online dengan integrasi REST API, sistem jadwal real-time, serta fitur riwayat dan manajemen booking pengguna.",
+    category: "Mobile Apps",
+    tech: ["Flutter", "REST API", "MySQL"],
+    image: "./assets/Projects/Project-Sportygo.jpg",
+  },
+  {
+    title: "Sistem Informasi Akademik",
+    description:
+      "Sistem berbasis web untuk pengelolaan data akademik mahasiswa, termasuk absensi per pertemuan, pengolahan nilai, autentikasi pengguna, serta dashboard admin dan mahasiswa.",
+    category: "Web System",
+    tech: ["PHP", "CodeIgniter", "MySql"],
+    image: "./assets/Projects/Project-Akademik.png",
+  },
+  {
+    title: "Website Profile Sekolah",
+    description:
+      "Website profil sekolah yang menampilkan informasi institusi, berita terbaru, galeri kegiatan, serta sistem pendaftaran siswa baru secara online dengan formulir digital.",
+    category: "Web Development",
+    tech: ["PHP", "Bootstrap", "MySQL", "CodeIgniter"],
+    image: "./assets/Projects/Project-ProfileSekolah.png",
+  },
+  {
+    title: "Website Pemesanan Tiket Kereta",
+    description:
+      "Aplikasi web frontend untuk pemesanan tiket kereta dengan fitur pencarian jadwal, pemilihan kursi, simulasi pembayaran, serta tampilan UI responsif dan interaktif.",
+    category: "Frontend",
+    tech: ["PHP", "Bootstrap", "MySQL"],
+    image: "./assets/Projects/Project-Tiketku.png",
+  },
+];
+
 
   const headingVariants = {
     hidden: { opacity: 0, y: 20 },

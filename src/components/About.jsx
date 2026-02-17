@@ -95,18 +95,7 @@ function About() {
               </p>
             </div>
 
-            <div className="bg-slate-800/40 backdrop-blur-xl p-6 rounded-xl border border-slate-700 hover:border-blue-400/30 transition-all duration-300">
-              <h3 className="text-2xl font-bold text-blue-300 mb-3">
-                Eksplorasi Saat Ini
-              </h3>
-              <p className="text-slate-300 leading-relaxed">
-                Saat ini saya sedang mendalami{" "}
-                <span className="text-blue-400 font-semibold">Arsitektur Frontend</span>
-                , integrasi sistem yang kompleks, serta metodologi{" "}
-                <span className="text-cyan-400 font-semibold">User Experience</span>{" "}
-                untuk menghadirkan produk yang mampu bersaing di industri global.
-              </p>
-            </div>
+          
           </motion.div>
 
           {/* Right side - Highlights */}

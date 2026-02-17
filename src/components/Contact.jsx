@@ -107,7 +107,7 @@ function Contact() {
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 hover:border-blue-400 transition-all duration-300 hover:shadow-lg hover:shadow-blue-400/20 group">
             <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">⏱️</div>
             <h3 className="text-lg font-semibold mb-2">Response Time</h3>
-            <p className="text-slate-300">Biasanya 24 jam</p>
+            <p className="text-slate-300">Biasanya 11 jam</p>
           </div>
         </div>
 
