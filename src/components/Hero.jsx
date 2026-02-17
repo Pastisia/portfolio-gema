@@ -98,7 +98,7 @@ function Hero() {
             <div className="flex items-center gap-2">
               <span className="text-2xl">💼</span>
               <div>
-                <p className="font-semibold text-blue-300">5+</p>
+                <p className="font-semibold text-blue-300">8+</p>
                 <p className="text-slate-400">Projects</p>
               </div>
             </div>

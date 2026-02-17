@@ -8,7 +8,7 @@ function Projects() {
       description:
         "Platform belanja online khusus t-shirt dengan integrasi sistem pencarian, keranjang belanja, dan manajemen inventaris.",
       category: "Web Development", // Menambahkan kategori agar sama dengan kartu Design
-      tech: ["PHP", "MySQL", "Tailwind"],
+      tech: ["PHP", "MySQL", "Bootstrap"],
       image:
         "./assets/Projects/Project-Rgistro.png",
     },
@@ -26,7 +26,7 @@ function Projects() {
       description:
         "Dashboard manajemen pendidikan untuk absensi mahasiswa dan pengolahan nilai yang terstruktur.",
       category: "Web System",
-      tech: ["PHP", "SQL Server"],
+      tech: ["PHP", "CodeIgniter", "MySql"],
       image:
         "./assets/Projects/Project-Akademik.png",
     },
@@ -34,8 +34,8 @@ function Projects() {
       title: "Website Profile Sekolah",
       description:
         "Portal pendaftaran siswa baru yang informatif dengan fitur publikasi berita dan formulir pendaftaran digital.",
-      category: "Frontend",
-      tech: ["HTML", "CSS", "JavaScript"],
+      category: "Web Development",
+      tech: ["PHP", "Bootstrap", "MySQL", "CodeIgniter"],
       image:
         "./assets/Projects/Project-ProfileSekolah.png",
     },
@@ -44,7 +44,7 @@ function Projects() {
       description:
         "Portal pendaftaran siswa baru yang informatif dengan fitur publikasi berita dan formulir pendaftaran digital.",
       category: "Frontend",
-      tech: ["HTML", "CSS", "JavaScript"],
+      tech: ["PHP", "Bootstrap", "MySQL"],
       image:
         "./assets/Projects/Project-Tiketku.png",
     },

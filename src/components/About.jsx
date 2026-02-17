@@ -151,9 +151,9 @@ function About() {
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="space-y-2">
               <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                5+
+                8+
               </div>
-              <p className="text-slate-300">Proyek Selesai</p>
+              <p className="text-slate-300">Project Selesai</p>
             </div>
             <div className="space-y-2">
               <div className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">

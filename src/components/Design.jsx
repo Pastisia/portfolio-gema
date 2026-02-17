@@ -4,40 +4,49 @@ import GlareHover from "./GlareHover";
 function Design() {
   const designWorks = [
     {
-      title: "E-Commerce Website Design",
+      title: "Web Design Carwash ",
       description:
         "Modern & responsive web design untuk platform e-commerce dengan fokus pada user experience.",
-      category: "Web Design",
+      category: "UI/UX Design",
       image:
-        "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop",
-      tools: ["Figma", "Adobe XD", "UI/UX"],
+        "./assets/Projects/Design-WebCarwash.png",
+      tools: ["Figma"],
     },
     {
-      title: "Mobile App UI Kit",
+      title: "Mobile App HunianID",
       description:
         "Comprehensive UI kit untuk mobile application dengan consistent design system dan component library.",
       category: "UI/UX Design",
       image:
-        "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop",
-      tools: ["Figma", "Adobe XD"],
+        "./assets/Projects/Design-HunianID.png",
+      tools: ["Figma"],
     },
     {
-      title: "Brand Identity Design",
+      title: "Web Payroll Design",
       description:
         "Complete brand identity termasuk logo, color palette, dan typography guidelines untuk startup.",
-      category: "Graphic Design",
+      category: "UI/UX Design",
       image:
-        "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop",
-      tools: ["Adobe Illustrator", "Photoshop"],
+        "./assets/Projects/Design-WebSirojul.png",
+      tools: ["Figma"],
     },
     {
-      title: "Landing Page Design",
+      title: "Design ID Card",
       description:
         "High-converting landing page design dengan modern aesthetic dan clear call-to-action.",
-      category: "Web Design",
+      category: "Graphic Design",
       image:
-        "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop",
-      tools: ["Figma", "Adobe XD"],
+        "./assets/Projects/Design-Idcard1.png",
+      tools: ["CorelDraw"],
+    },
+    {
+      title: "Design Poster Makanan",
+      description:
+        "High-converting landing page design dengan modern aesthetic dan clear call-to-action.",
+      category: "Graphic Design",
+      image:
+        "./assets/Projects/Design-PosterMakanan.png",
+      tools: ["CorelDraw"],
     },
   ];
 
@@ -100,7 +109,7 @@ function Design() {
               className="group bg-slate-900/40 backdrop-blur-sm border border-slate-800 hover:border-blue-500/50 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10"
               variants={cardVariants}
             >
-              <div className="relative overflow-hidden h-64 bg-slate-800">
+              <div className="relative overflow-hidden h-80 bg-slate-800">
                 <GlareHover
                   className="w-full h-full"
                   glareColor="#3b82f6"
@@ -119,7 +128,7 @@ function Design() {
 
                 {/* Category Badge - Blue/Cyan Theme */}
                 <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 bg-blue-600/20 backdrop-blur-md text-blue-300 rounded-full text-xs font-semibold border border-blue-400/30">
+                  <span className="px-3 py-1 bg-blue-600/20 backdrop-blur-md text-blue-700 rounded-full text-xs font-semibold border border-blue-700/30">
                     {work.category}
                   </span>
                 </div>
