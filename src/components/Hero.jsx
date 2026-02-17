@@ -23,7 +23,7 @@ function Hero() {
   };
 
   return (
-    <section className="min-h-screen pt-12 md:pt-20 flex items-center justify-center bg-gradient-to-b from-slate-950 via-blue-950 to-slate-900 text-white px-6 relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-slate-950 via-blue-950 to-slate-900 text-white px-6 md:px-20 relative overflow-hidden py-20 md:py-0">
       {/* Background decoration - Unified Blue Theme */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-600 rounded-full mix-blend-screen filter blur-3xl animate-blob"></div>
@@ -31,10 +31,10 @@ function Hero() {
         <div className="absolute -bottom-20 left-1/2 w-80 h-80 bg-indigo-600 rounded-full mix-blend-screen filter blur-3xl animate-blob animation-delay-4000"></div>
       </div>
 
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-16 items-center relative z-10">
         {/* Left Side - Content */}
         <motion.div
-          className="flex ps-8 flex-col justify-center"
+          className="order-2 md:order-1 flex flex-col justify-center text-center md:text-left mt-8 md:mt-0"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -69,18 +69,25 @@ function Hero() {
               Developer × Designer
             </p>
             <p className="text-slate-300 text-lg leading-relaxed max-w-lg">
-              Mahasiswa Manajemen Informatika yang passion dalam membangun solusi digital berkualitas tinggi. Experienced dalam Web Development, Mobile Apps, dan Digital Design.
+              Mahasiswa Manajemen Informatika yang passion dalam membangun
+              solusi digital berkualitas tinggi. Experienced dalam Web
+              Development, Mobile Apps, dan Digital Design.
             </p>
           </motion.div>
 
           {/* CTA Buttons */}
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-8">
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-wrap gap-4 mb-8"
+          >
             <a
               href="#projects"
               className="group px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg shadow-blue-500/25 flex items-center gap-2"
             >
               🚀 View My Work
-              <span className="group-hover:translate-x-1 transition-transform">→</span>
+              <span className="group-hover:translate-x-1 transition-transform">
+                →
+              </span>
             </a>
             <a
               href="#contact"
@@ -121,12 +128,12 @@ function Hero() {
 
         {/* Right Side - Profile Image */}
         <motion.div
-          className="flex justify-center items-center"
+          className="order-1 md:order-2 flex justify-center items-center mb-10 md:mb-0"
           variants={itemVariants}
           initial="hidden"
           animate="visible"
         >
-          <div className="relative w-80 h-96 group">
+          <div className="relative w-72 h-88 md:w-96 md:h-[28rem] group">
             {/* Animated border - Blue shades */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-600 rounded-3xl blur-2xl opacity-20 group-hover:opacity-40 transition-all duration-300 animate-pulse"></div>
 
